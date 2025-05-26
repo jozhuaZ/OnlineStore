@@ -21,7 +21,9 @@ export default function LandingPage () {
                         <NavButton title='Login' color='pink-to-orange' 
                             onClick={() => {navigate('/LoginPage/LoginPage')}} 
                         />
-                        <NavButton title='Sign Up' color='teal-to-lime' />
+                        <NavButton title='Sign Up' color='teal-to-lime'
+                            onClick={() => navigate('/SignUpPage/SignUpPage')}
+                        />
                     </section>
 
                     {/* GREETING TEXT */}
