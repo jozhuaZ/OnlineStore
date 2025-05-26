@@ -29,7 +29,7 @@ export default function LoginPage () {
                                 Sign in
                             </button>
                             <p className='font-poppins text-center text-sm font-light text-[#f5f5f5]'>
-                                Don't have an account yet?   <a href='#' className='text-[16px] font-medium hover:underline text-white hover:text-blue-300'> Sign up</a>
+                                Don't have an account yet?   <a href='/SignUpPage/SignUpPage' className='text-[16px] font-medium hover:underline text-white hover:text-blue-300'> Sign up</a>
                             </p>
                         </form>
                     </div>
