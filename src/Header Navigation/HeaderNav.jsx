@@ -12,7 +12,7 @@ const HeaderNav = () => {
                 />
                 {/* TO BE A CLICKABLE LINK, THAT WOULD REDIRECT TO MY ABOUT */}
                 <p className='font-poppins text-shadow-xs text-[17px] sm:text-2xl'>
-                    JoshDev
+                    JoshDev Store
                 </p>
             </div>
             
