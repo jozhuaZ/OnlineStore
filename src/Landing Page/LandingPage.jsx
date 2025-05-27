@@ -1,5 +1,5 @@
 import store_card_image from '../assets/LandingPage/store_card.jpg';
-import HeaderNav from "../Header Navigation/HeaderNav";
+import HeaderNav from "../HeaderSidebar/HeaderNav";
 import MaxWidthCard from '../Components/MaxWidthCard/MaxWidthCard';
 import { NavButton } from "../Components/Button/NavButton";
 import { Star } from '../Components/StarRating/Star';
@@ -11,7 +11,7 @@ export default function LandingPage () {
 
     return (
         <div className='h-full bg-linear-to-b from-blue-900 to-blue-100'>
-            <HeaderNav />
+            <HeaderNav showSideBar={false} />
 
             <main>
                 {/* CONTAINER TO HOLD GREETING AND BUTTONS */}
