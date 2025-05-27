@@ -18,10 +18,10 @@ export default function LandingPage () {
                 <div className='flex items-center justify-evenly mt-10 sm:mt-15 flex-col-reverse gap-5 sm:flex-row-reverse'>
                     {/* LOGIN AND SIGN-UP BUTTON */}
                     <section className='sm:flex sm:items-center sm:gap-5'>
-                        <NavButton title='Login' color='pink-to-orange' 
+                        <NavButton title='Login' color='pink-to-orange' className='text-white from-pink-500 to-orange-400 hover:bg-gradient-to-bl'
                             onClick={() => {navigate('/LoginPage/LoginPage')}} 
                         />
-                        <NavButton title='Sign Up' color='teal-to-lime'
+                        <NavButton title='Sign Up' color='teal-to-lime' className='text-gray-900 from-teal-200 to-lime-200 hover:bg-gradient-to-bl hover:from-teal-200 hover:to-lime-200 dark:focus:ring-teal-700'
                             onClick={() => navigate('/SignUpPage/SignUpPage')}
                         />
                     </section>
@@ -48,7 +48,9 @@ export default function LandingPage () {
                             support, Our Store has earned the trust of millions worldwide. Whether you're shopping for 
                             electronics, fashion, or daily essentials, We guarantee a quality and satisfaction—every time.
                         </p>
-                        <NavButton title='Shop Now!' />
+                        <NavButton title='Get Started!' className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br' 
+                            onClick={() => navigate('/SignUpPage/SignUpPage')}
+                        />
                     </div>
 
                     {/* IMAGE CONTAINER  */}
@@ -73,6 +75,9 @@ export default function LandingPage () {
                             essentials! Don't miss your chance to grab your favorites at unbeatable prices. Hurry, 
                             while stocks last!
                         </p>
+                        <NavButton title='Shop Now!' className='w-fit self-center mt-6 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br' 
+                            onClick={() => navigate('/StorePage/StorePage')}
+                        />
                 </MaxWidthCard>
 
                 {/* RATINGS CONTAINER */}
