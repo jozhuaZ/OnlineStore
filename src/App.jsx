@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Landing Page/LandingPage";
 import LoginPage from "./LoginPage/LoginPage";
 import SignUpPage from "./SignUpPage/SignUpPage";
-import StorePage from './StorePage/StorePage';
+import StorePage from './StorePage/Storepage';
 
 export default function App () {
     return (
