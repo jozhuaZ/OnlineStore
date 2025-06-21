@@ -73,7 +73,7 @@ export default function SignUpPage () {
                     
                     {/* LINK TO GO BACK TO LOGIN */}
                     <p className='text-center text-sm font-light pt-5'>
-                        Already registered?   <a href='/LoginPage/LoginPage' className='text-[16px] font-medium hover:underline hover:text-blue-300'> Login</a> instead.
+                        Already registered?   <a href='/pages/LoginPage' className='text-[16px] font-medium hover:underline hover:text-blue-300'> Login</a> instead.
                     </p>
                 </form>
             </div>

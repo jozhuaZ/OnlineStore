@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { MenuContext } from '../contexts/MenuContext';
-import SideBar from "./AsidePanel";
+import SideBar from "./SideBar";
 import HeaderNav from "./HeaderNav";
 
 const HeaderSideBar = () => {

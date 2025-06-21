@@ -19,10 +19,10 @@ export default function LandingPage () {
                     {/* LOGIN AND SIGN-UP BUTTON */}
                     <section className='sm:flex sm:items-center sm:gap-5'>
                         <NavButton title='Login' color='pink-to-orange' className='text-white from-pink-500 to-orange-400 hover:bg-gradient-to-bl'
-                            onClick={() => {navigate('/LoginPage/LoginPage')}} 
+                            onClick={() => {navigate('/pages/LoginPage')}} 
                         />
                         <NavButton title='Sign Up' color='teal-to-lime' className='text-gray-900 from-teal-200 to-lime-200 hover:bg-gradient-to-bl hover:from-teal-200 hover:to-lime-200 dark:focus:ring-teal-700'
-                            onClick={() => navigate('/SignUpPage/SignUpPage')}
+                            onClick={() => navigate('/pages/SignUpPage')}
                         />
                     </section>
 
@@ -49,7 +49,7 @@ export default function LandingPage () {
                             electronics, fashion, or daily essentials, We guarantee a quality and satisfaction—every time.
                         </p>
                         <NavButton title='Get Started!' className='text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br' 
-                            onClick={() => navigate('/SignUpPage/SignUpPage')}
+                            onClick={() => navigate('/pages/SignUpPage')}
                         />
                     </div>
 
@@ -76,7 +76,7 @@ export default function LandingPage () {
                             while stocks last!
                         </p>
                         <NavButton title='Shop Now!' className='w-fit self-center mt-6 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br' 
-                            onClick={() => navigate('/StorePage/StorePage')}
+                            onClick={() => navigate('/pages/StorePage')}
                         />
                 </MaxWidthCard>
 

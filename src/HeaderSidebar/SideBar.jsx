@@ -1,6 +1,12 @@
 import { useState, useContext } from 'react';
 import { MenuContext } from '../contexts/MenuContext';
 import default_profile_img from '../assets/default_profile.png';
+import User from '../models/User';
+
+// const user = new User({ 
+//     email: 'joshua@gmail.com',
+
+// });
 
 const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +27,16 @@ const SideBar = () => {
                             src={default_profile_img}
                             alt='your profile pic'
                         />
-                        <div className="font-poppins text-right">
+                        <div className='font-poppins text-right'>
                             {/* full name */}
                             <p>Sample, User</p>
 
                             {/* email with ellipsis and tooltip on hover */}
-                            <div className="relative group w-fit mx-auto">
-                                <p className="text-xs max-w-[150px] truncate overflow-hidden whitespace-nowrap">
+                            <div className='relative group w-fit mx-auto'>
+                                <p className='text-xs max-w-[150px] truncate overflow-hidden whitespace-nowrap'>
                                 sampleuser@gmail.com
                                 </p>
-                                <div className="absolute left-1/2 -translate-x-1/2 mt-1 hidden group-hover:block bg-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg z-10 whitespace-normal max-w-xs">
+                                <div className='absolute left-1/2 -translate-x-1/2 mt-1 hidden group-hover:block bg-gray-700 text-white text-xs px-2 py-1 rounded shadow-lg z-10 whitespace-normal max-w-xs'>
                                     sampleuser@gmail.com
                                 </div>
                             </div>
@@ -41,7 +47,7 @@ const SideBar = () => {
                     <ul className='space-y-2 font-medium font-poppins'> 
                         {/* STORE */}
                         <li className='text-link-hover hover:bg-gray-50'>
-                            <a href='#' className='flex items-center p-2 rounded-lg group'>
+                            <a href='/pages/StorePage' className='flex items-center p-2 rounded-lg group'>
                                 <svg className='w-6 h-6' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' viewBox='0 0 24 24'>
                                     <path fillRule='evenodd' d='M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z' clipRule='evenodd'/>
                                 </svg>
@@ -66,15 +72,15 @@ const SideBar = () => {
                         {isOpen && (
                             // TO BE DYNAMIC 
                             <ul className='py-2 space-y-2'>
-                            <li className='text-link-hover max-w-fit hover:bg-gray-50'>
-                                <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Electronics</a>
-                            </li>
-                            <li className='text-link-hover max-w-fit hover:bg-gray-50'>
-                                <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Clothes</a>
-                            </li>
-                            <li className='text-link-hover max-w-fit hover:bg-gray-50'>
-                                <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Shoes</a>
-                            </li>
+                                <li className='text-link-hover max-w-fit hover:bg-gray-50'>
+                                    <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Electronics</a>
+                                </li>
+                                <li className='text-link-hover max-w-fit hover:bg-gray-50'>
+                                    <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Clothes</a>
+                                </li>
+                                <li className='text-link-hover max-w-fit hover:bg-gray-50'>
+                                    <a href='#' className='flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group'>-&gt; Shoes</a>
+                                </li>
                             </ul>
                         )}
                         {/* VIEW CART */}
@@ -133,6 +139,18 @@ const SideBar = () => {
                                     <path fillRule='evenodd' d='M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.008-3.018a1.502 1.502 0 0 1 2.522 1.159v.024a1.44 1.44 0 0 1-1.493 1.418 1 1 0 0 0-1.037.999V14a1 1 0 1 0 2 0v-.539a3.44 3.44 0 0 0 2.529-3.256 3.502 3.502 0 0 0-7-.255 1 1 0 0 0 2 .076c.014-.398.187-.774.48-1.044Zm.982 7.026a1 1 0 1 0 0 2H12a1 1 0 1 0 0-2h-.01Z' clipRule='evenodd'/>
                                 </svg>
                                 <span className='flex-1 ms-3 whitespace-nowrap'>Help Center</span>
+                            </a>
+                        </li>
+                        
+                        <hr />
+
+                        {/* LOGOUT */}
+                        <li className='text-link-hover hover:bg-gray-50'>
+                            <a href='#' className='flex items-center p-2 rounded-lg group'>
+                                <svg className='w-6 h-6' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'>
+                                    <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2'/>
+                                </svg>
+                                <span className='flex-1 ms-3 whitespace-nowrap'>Log Out</span>
                             </a>
                         </li>
                     </ul>
