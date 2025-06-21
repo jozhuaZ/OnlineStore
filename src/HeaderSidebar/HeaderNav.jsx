@@ -11,7 +11,7 @@ const HeaderNav = ({ showSideBar = true }) => {
             <div className='flex-center gap-1 sm:gap-8'>
                 {/* THREE LINE MENU SIDEBAR NAVIGATION */}
                 { showSideBar && (
-                    <div className='md:hidden' onClick={() => setOpenMenu(!openMenu)}>
+                    <div onClick={() => setOpenMenu(!openMenu)}>
                         <svg className='w-7 h-7 cursor-pointer hover:text-gray-900 hover:scale-[1.05] duration-300 ease-in-out' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'>
                             <path stroke='currentColor' strokeLinecap='round' strokeWidth='2' d='M5 7h14M5 12h14M5 17h14'/>
                         </svg>
@@ -36,7 +36,7 @@ const HeaderNav = ({ showSideBar = true }) => {
                         <a href='/' className='text-[14px] sm:text-[18px] text-shadow-xs'>Home</a> 
                     </li>
                     <li className='text-link-hover'>
-                        <a href='/StorePage/StorePage' className='text-[14px] sm:text-[18px] text-shadow-xs'>Store</a> 
+                        <a href='/pages/StorePage' className='text-[14px] sm:text-[18px] text-shadow-xs'>Store</a> 
                     </li>
                 </ul>
             </nav>
