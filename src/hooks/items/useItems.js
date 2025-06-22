@@ -31,8 +31,25 @@ export default function useItems () {
 
     useEffect(() => {
         const fetchItems = async () => {
-            // fetch items from database
+            try {
+                const response = await fetch('http://localhost/store/fetchItems.php');
+                // GET is the default method
+                // const response = await fetch('http://localhost/store/fetchItems.php', {
+                //     method: 'GET'
+                // });
+                if (!response.ok) throw new Error(`Response Status: ${response.status}`);
+                
+                const data = await response.json();
+                
+                // convert each object into instance
+                const itemInstances = data.items.map(item => new Item(item));
+                setItems(itemInstances);
+            } catch (error) {
+                console.error('something went wrong in fetchItems:', error);
+            }
         };
         fetchItems();
     }, []);
+
+    return { items };
 };
