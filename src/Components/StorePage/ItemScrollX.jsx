@@ -1,9 +1,14 @@
+import useItems from "../../hooks/items/useItems";
+import ItemCard from "../ItemCard/Card";
 
 const ItemScrollX = () => {
-    return (
-        <div>
+    const { items } = useItems();
 
-        </div>
+    return (
+        <section>
+                <ItemCard image={items[0]?.getImageUrl()}>
+                </ItemCard>
+        </section>
     );
 };
 
