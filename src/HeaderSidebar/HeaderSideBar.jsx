@@ -4,7 +4,7 @@ import SideBar from "./SideBar";
 import HeaderNav from "./HeaderNav";
 
 const HeaderSideBar = () => {
-    const [openMenu, setOpenMenu] = useState(true);
+    const [openMenu, setOpenMenu] = useState(false);
 
     return (
         <MenuContext.Provider value={{ openMenu, setOpenMenu }}>
